@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { PhotoProvider } from './components/photoContext/PhotoContext'; 
-import Home from './home';
+import Home from './Home';
 import Footer from './components/footer/Footer';
 import PhotoDetails from './components/photoDetails/PhotoDetails';
 import Navbar from './components/navbar/Navbar';
