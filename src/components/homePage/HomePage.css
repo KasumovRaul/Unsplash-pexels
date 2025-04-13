@@ -1,0 +1,193 @@
+.photoCard-container{
+    width: 100%;
+    padding: 2rem;
+    background-color: #0f0f0f;
+    min-height: 100vh;
+    position: absolute;
+}
+
+.photoCard-image-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+} 
+
+.photoCard-image-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.photoCard-image-section img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 6px 30px rgba(255, 255, 255, 0.15);
+}
+
+.photoCard-wrapper {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+
+.photoCard-image-section p{
+    color: var(--color-white);
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.photoCard-info.top-left {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 6px 10px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    z-index: 2;
+    transform: translateY(-200%);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .photoCard-wrapper:hover .photoCard-info.top-left{
+    transform: translateX(0);
+  }
+
+  .photoCard-download.bottom-left{
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: var(--color-ff);
+    padding: 6.5px 12px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    z-index: 2;
+    color: var(--color-ff);
+    cursor: pointer;
+    transform: translateY(200%);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .photoCard-wrapper:hover .photoCard-download.bottom-left{
+    transform: translateX(0);
+  }
+
+.photographer-name {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--color-white);
+    position: relative;
+    z-index: 99; 
+}
+
+.pagination-section{
+  text-align: center;
+  margin: 3em;
+  gap: 1em;
+  
+}
+
+.pagination-after, .pagination-before{
+  font-size: large;
+  cursor: pointer;
+  width: 55px;
+  height: 28px;
+  margin: 1em;
+  background-color: var(--color-ff);
+}
+
+.pagination-count{
+  color: var(--color-white);
+}
+
+/*Video*/
+.videoCard-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0;
+  justify-content: center;
+}
+
+.VideoCard-video {
+  background-color: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.video {
+  width: 300px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.VideoCard-video:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+.VideoCard-video p {
+  font-size: 16px;
+  color: #888;
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid var(--color-ff);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@media (max-width: 600px) {
+    .photoCard-container {
+      padding: 1rem;
+    }
+  
+    .photoCard-image-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .VideoCard-wrapper {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}

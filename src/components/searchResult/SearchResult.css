@@ -1,0 +1,25 @@
+.result-container{
+    padding: 2em;
+    margin-top: 5em;
+}
+
+.result-head{
+    margin-bottom: 2em;
+    color: var(--color-white);
+}
+
+.result-head span{
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.result-head strong{
+    font-weight: 600;
+}
+
+.result-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    cursor: pointer;
+}

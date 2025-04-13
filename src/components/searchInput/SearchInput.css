@@ -1,0 +1,30 @@
+.search-input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .suggestion-list {
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+  }
+  
+  .suggestion-list li {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .suggestion-list li:hover {
+    background-color: #f0f0f0;
+  }
+  
